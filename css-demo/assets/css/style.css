@@ -23,5 +23,5 @@ header.primary{  /*targets primary header*/
     background-color: #07E308;
     color: #ffffff; /*font color*/
     text-align: center;
-    text-shadow: 3px 5px #000000;
+    text-shadow: 3px 5px 8px #000000;
 }
