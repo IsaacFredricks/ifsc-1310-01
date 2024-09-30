@@ -1,0 +1,27 @@
+/*css demo*/
+/* colors - body: #07E308, */
+/*  ---------------Box Sizing-----------------  */
+
+html {
+    box-sizing: border-box;
+  }
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+
+
+body{
+    
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+header.primary{  /*targets primary header*/
+    background-color: #07E308;
+    color: #ffffff; /*font color*/
+    text-align: center;
+    text-shadow: 3px 5px #000000;
+}
