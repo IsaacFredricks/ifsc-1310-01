@@ -94,6 +94,12 @@ section.container#content h3{
   border:10px dotted #966bbc;
 
 }
+
+section.container#blog{
+  color-interpolation-filters: sRGB;
+  background-color: #616310;
+  
+}
 footer{
   text-align: right;
   background-color: rgba(62, 226, 188, 0.503);
