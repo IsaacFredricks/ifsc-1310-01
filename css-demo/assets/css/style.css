@@ -25,8 +25,8 @@ header.primary{  /*targets primary header*/
     color: #ffffff; /*font color*/
     text-align: center;
     text-shadow: 10px 5px 8px #000000;
-    padding: 30px 12px
-    margin:0;
+    padding: 30px 12px;
+    margin: 0;
 }
 
 header.primary h1{
@@ -74,12 +74,31 @@ header.primary nav.primary ul li a:hover{
   background-color: rgba(163, 49, 49, 0.7)
 }
 
-
-footer{
-  text-align: right;
-  color: #84B026;
+section.container#content{
+  background-color: rgb(94, 42, 23);
+  text-transform: uppercase;
+  text-decoration: overline;
+  margin:auto;
 }
 
+section.container#content h2{
+  background-size: contain;
+  color:#bc3b88;
+}
+
+section.container#content p{
+  color:#c5ca39;
+}
+
+section.container#content h3{
+  border:10px dotted #966bbc;
+
+}
+footer{
+  text-align: right;
+  background-color: rgba(62, 226, 188, 0.503);
+  color: #84B026;
+}
 
 /*media quieres*/
 
