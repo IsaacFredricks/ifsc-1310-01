@@ -14,29 +14,83 @@ html {
 
 body{
     
-    font-family: "Roboto", sans-serif;
+    font-family: "Roboto", sans-serif; /*font*/
     font-weight: 300;
     font-style: normal;
+    margin:0;
 }
 
 header.primary{  /*targets primary header*/
     background-color: #07E308;
     color: #ffffff; /*font color*/
     text-align: center;
-    text-shadow: 3px 5px 8px #000000;
+    text-shadow: 10px 5px 8px #000000;
+    padding: 30px 12px
+    margin:0;
 }
+
+header.primary h1{
+  font-size: 10rem;
+
+  margin: 3px;
+}
+
+header.primary h1 a{
+  color: #cf7922;
+  text-decoration: none;
+}
+
+header.primary h2{
+  font-size: 5rem;
+  margin: 20px 0 0;
+}
+
+header.primary nav.primary{}
+
+header.primary nav.primary ul{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background:greenyellow;
+}
+
+header.primary nav.primary ul li{
+  list-style-type: lower-greek;
+  background-color: rgb(217, 108, 141);
+  padding:5px;
+}
+
+header.primary nav.primary ul li a{
+  color:#ffffff;
+  text-decoration: none;
+  border: 3px double #92c91b;
+  padding: 18px 10px;
+  background-color: rgba(126, 142, 157, 0.5);
+  border-radius: 50px;
+  transition: 1s;
+}
+
+header.primary nav.primary ul li a:hover{
+  background-color: rgba(163, 49, 49, 0.7)
+}
+
 
 footer{
   text-align: right;
   color: #84B026;
 }
 
-#blog{
-  color: #173540;
-}
 
-#colophon{
-  text-align: center;
-  text-indent: 0%;
-  background-color: #3D3D3D;
+/*media quieres*/
+
+@media screen and (max-width: 500px){
+  header.primary nav.primary ul{
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  header.primary nav a{
+    display:block;
+    margin:auto;
+  }
 }
