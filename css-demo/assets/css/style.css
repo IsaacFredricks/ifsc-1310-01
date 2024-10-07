@@ -127,6 +127,7 @@ section.container#blog{
   background-color: #616310;
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap-reverse;
   flex-direction: row;/*row is default*/
   gap: 1rem;
 }
