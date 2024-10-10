@@ -98,6 +98,7 @@ header.primary nav.primary ul li a:hover{
 
 section.container#content{
   background-color: rgb(94, 42, 23);
+  font-weight: bold;
   text-transform: uppercase;
   text-decoration: overline;
   margin:auto;
@@ -112,6 +113,7 @@ section.container#content h2{
 section.container#content p{
   color:#c5ca39;
   text-rendering: optimizeLegibility;
+  text-indent: 50px;
 }
 
 section.container#content h3{
@@ -174,6 +176,8 @@ aside .container{
 }
 
 aside article.widget a{
+  text-decoration: none;
+  text-transform: capitalize;
   color: #5c0338;
 }
 
