@@ -109,7 +109,9 @@ header.primary nav.primary ul{
 header.primary nav.primary ul li{
   list-style-type: lower-greek;
   background-color: rgb(217, 108, 141);
-  padding:5px;
+  font-size: larger;
+  padding: 1px;
+  border-radius: 20px;
 }
 
 header.primary nav.primary ul li a{
@@ -123,7 +125,8 @@ header.primary nav.primary ul li a{
 }
 
 header.primary nav.primary ul li a:hover{
-  background-color: rgba(163, 49, 49, 0.7)
+  background-color: rgba(163, 49, 49, 0.7);
+  background-size: auto;
 }
 
 section.container#content{
@@ -163,15 +166,15 @@ section.container#blog{
   justify-content: space-around;
   flex-wrap: wrap-reverse;
   flex-direction: row-reverse;/*row is default*/
-  border-top: 10px solid #616310;
-  padding: 15px 0 0 0;
-  border-bottom: 10px solid #616310;
-  padding: 15px 0 0 0;
+  border-top: 5px solid #616310;
+  padding: 10px 0 0 0;
+  border-bottom: 5px solid #616310;
+  padding: 10px 0 0 0;
   gap: 1rem;
 }
 
 #blog article.post {
-  box-shadow: 200px 40px 253px 40px rgba(109, 168, 57, 0.75);
+  box-shadow: 40px rgba(109, 168, 57, 0.75);
   text-indent: 25px;
   padding: 8px;
   border-radius: 20px;
@@ -183,6 +186,7 @@ section.container#blog{
   margin: 0;
 }
 
+
 #blog figcaption, time.post-date {
   /*for settings, both included*/
   text-transform: lowercase;
@@ -190,17 +194,13 @@ section.container#blog{
   color: lightpink;
 }
 
+
 #blog article.post:hover {
   box-shadow: 20px 2px 2px 20px rgba(109, 168, 57, 0.75);
 }
 
 #blog .post a{
   color:#f8a3d6;
-}
-
-aside[role="complementary"]{/*[] attribute selector can be used for any attribute*/
-  background-color: #7a2323b2;
-  padding: 20px 20px;
 }
 
 #practice h2{
@@ -222,9 +222,11 @@ aside[role="complementary"]{/*[] attribute selector can be used for any attribut
 }
 
 #practice h3{
-  border-left: 5px solid rgb(55, 55, 155);
+  border-left: 10px solid rgb(55, 55, 155);
   padding: 6px 0 6px 20px;
   border-top-left-radius: 20px;
+  border-bottom-left-radius: 30px;
+  text-align: center;
 }
 
 table{
@@ -241,14 +243,26 @@ caption{
 
 tr:nth-child(even){
   background-color: #966bbc;
+  transition: 0.5s;
 }
 
 tr:nth-child(odd){
   background-color: #ffffff;
+  text-rendering: auto;
+  text-decoration: overline;
+  transition: 0.5s;
 }
 
 tr:hover{
   background-color: #db6666;
+}
+
+tr:first-of-type:hover{
+  background-color: #966bbc;
+}
+
+tr:last-of-type:hover{
+  background-color: #ffffff;
 }
 
 th{
@@ -274,7 +288,14 @@ td:nth-child(n+2){/*right align numerical values
 
 #practice ul li ul{
   list-style-type: decimal;
-  list-style-position: inherit;
+  margin-left: 20px;
+}
+
+#practice ul li{
+  transition: 0.5s;
+}
+#practice ul li:hover{
+  list-style-type: square;
 }
 
 #practice dl dt{
@@ -290,14 +311,35 @@ td:nth-child(n+2){/*right align numerical values
   color: red;
 }
 
-#practice blockquote{
-  border: 20px double rgba(126, 142, 157, 0.5);
-  line-height: 1.2;
+#practice dt + dd{ /*selects all dt's that follow a dd*/
+  margin-top: 15px;
+  color: blue;
+}
+
+#practice dl{
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cg fill='%239C92AC' fill-opacity='0.4'%3E%3Cpolygon fill-rule='evenodd' points='8 4 12 6 8 8 6 12 4 8 0 6 4 4 6 0 8 4'/%3E%3C/g%3E%3C/svg%3E");
+  background-color: rgba(163, 49, 49, 0.2);
 }
 
 #practice h4{
+  text-indent: 30px;
   font-size: larger;
   font-weight: bolder;
+}
+
+#practice blockquote{
+  border: 20px double rgba(126, 142, 157, 0.5);
+  line-height: 2; /*text spacing*/
+  border-bottom-left-radius: 50px;
+  border-top-right-radius: 50px;
+  padding: 10px;
+}
+
+#practice blockquote b{
+  font-stretch: expanded;
+  font-weight: bold;
+  font-size: larger;
+  font-style: italic;
 }
 
 aside .container{
@@ -308,14 +350,23 @@ aside .container{
   gap: 0.4rem;
 }
 
-aside article.widget a{
-  text-decoration: none;
-  text-transform: capitalize;
-  color: #5c0338;
+
+aside[role="complementary"]{/*[] attribute selector can be used for any attribute*/
+  background-color: #7a2323b2;
+  padding: 20px 20px;
 }
 
-aside article.widget a:visited{/*visited link*/
-  color: #f8a3d6;
+aside article.widget{
+  background-color: #a784db;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='88' height='88' viewBox='0 0 88 88'%3E%3Cg fill='%239C92AC' fill-opacity='0.4'%3E%3Cpath fill-rule='evenodd' d='M29.42 29.41c.36-.36.58-.85.58-1.4V0h-4v26H0v4h28c.55 0 1.05-.22 1.41-.58h.01zm0 29.18c.36.36.58.86.58 1.4V88h-4V62H0v-4h28c.56 0 1.05.22 1.41.58zm29.16 0c-.36.36-.58.85-.58 1.4V88h4V62h26v-4H60c-.55 0-1.05.22-1.41.58h-.01zM62 26V0h-4v28c0 .55.22 1.05.58 1.41.37.37.86.59 1.41.59H88v-4H62zM18 36c0-1.1.9-2 2-2h10a2 2 0 1 1 0 4H20a2 2 0 0 1-2-2zm0 16c0-1.1.9-2 2-2h10a2 2 0 1 1 0 4H20a2 2 0 0 1-2-2zm16-26a2 2 0 0 1 2-2 2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4zm16 0a2 2 0 0 1 2-2 2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4zM34 58a2 2 0 0 1 2-2 2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4zm16 0a2 2 0 0 1 2-2 2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4zM34 78a2 2 0 0 1 2-2 2 2 0 0 1 2 2v6a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-6zm16 0a2 2 0 0 1 2-2 2 2 0 0 1 2 2v6a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-6zM34 4a2 2 0 0 1 2-2 2 2 0 0 1 2 2v6a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4zm16 0a2 2 0 0 1 2-2 2 2 0 0 1 2 2v6a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4zm-8 82a2 2 0 1 1 4 0v2h-4v-2zm0-68a2 2 0 1 1 4 0v10a2 2 0 1 1-4 0V18zM66 4a2 2 0 1 1 4 0v8a2 2 0 1 1-4 0V4zm0 72a2 2 0 1 1 4 0v8a2 2 0 1 1-4 0v-8zm-48 0a2 2 0 1 1 4 0v8a2 2 0 1 1-4 0v-8zm0-72a2 2 0 1 1 4 0v8a2 2 0 1 1-4 0V4zm24-4h4v2a2 2 0 1 1-4 0V0zm0 60a2 2 0 1 1 4 0v10a2 2 0 1 1-4 0V60zm14-24c0-1.1.9-2 2-2h10a2 2 0 1 1 0 4H58a2 2 0 0 1-2-2zm0 16c0-1.1.9-2 2-2h10a2 2 0 1 1 0 4H58a2 2 0 0 1-2-2zm-28-6a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm8 26a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm16 0a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM36 20a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm16 0a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm-8-8a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm0 68a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm16-34a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm16-12a2 2 0 1 0 0 4 6 6 0 1 1 0 12 2 2 0 1 0 0 4 10 10 0 1 0 0-20zm-64 0a2 2 0 1 1 0 4 6 6 0 1 0 0 12 2 2 0 1 1 0 4 10 10 0 1 1 0-20zm56-12a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm0 48a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm-48 0a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm0-48a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm24 32a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-4a6 6 0 1 0 0-12 6 6 0 0 0 0 12zm36-36a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-4a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM10 44c0-1.1.9-2 2-2h8a2 2 0 1 1 0 4h-8a2 2 0 0 1-2-2zm56 0c0-1.1.9-2 2-2h8a2 2 0 1 1 0 4h-8a2 2 0 0 1-2-2zm8 24c0-1.1.9-2 2-2h8a2 2 0 1 1 0 4h-8a2 2 0 0 1-2-2zM3 68c0-1.1.9-2 2-2h8a2 2 0 1 1 0 4H5a2 2 0 0 1-2-2zm0-48c0-1.1.9-2 2-2h8a2 2 0 1 1 0 4H5a2 2 0 0 1-2-2zm71 0c0-1.1.9-2 2-2h8a2 2 0 1 1 0 4h-8a2 2 0 0 1-2-2zm6 66a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-4a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM8 86a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-4a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm0-68A6 6 0 1 1 8 2a6 6 0 0 1 0 12zm0-4a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm36 36a2 2 0 1 0 0-4 2 2 0 0 0 0 4z'/%3E%3C/g%3E%3C/svg%3E");
+  color: rgba(200, 234, 8, 0.75);
+}
+
+aside article.widget a{
+  text-decoration: none;
+  text-transform: uppercase;
+  text-shadow: 10px 5px 8px #92c91b;
+  color: #5c0338;
 }
 
 aside article.widget a:last-of-type{/*last element in list of sibling elements*/
@@ -324,6 +375,14 @@ aside article.widget a:last-of-type{/*last element in list of sibling elements*/
   text-align: left;
 }
 
+aside article.widget a:visited{/*visited link*/
+  color: #775fe0;
+  text-decoration: none;
+}
+
+aside article.widget footer{
+  text-indent: 25px;
+}
 
 footer#colophon{
   background-color: rgba(62, 226, 188, 0.503);
@@ -333,6 +392,11 @@ footer#colophon{
   color: #84B026;
   font-size: 1.5rem;
   text-align: right;
+}
+
+footer#colophon h6{
+  font-style: italic;
+  color:#000000;
 }
 
 /*media quieres*/
