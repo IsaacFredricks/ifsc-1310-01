@@ -252,7 +252,7 @@ th{
 td{
   border: 5px solid purple;
   padding: 5px;
-  gap: 10px;git a
+  gap: 10px;
 }
 
 td:nth-child(n+2){/*right align numerical values
@@ -289,7 +289,8 @@ td:nth-child(n+2){/*right align numerical values
 }
 
 #practice h4{
-  
+  font-size: larger;
+  font-weight: bolder;
 }
 
 aside .container{
