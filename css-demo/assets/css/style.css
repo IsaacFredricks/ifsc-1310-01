@@ -281,6 +281,11 @@ td:nth-child(n+2){/*right align numerical values
   text-align: right;
 }
 
+#practice [href^="#"]{ /*targets the href beginning in #*/
+  background-color: brown;
+  font-stretch:extra-expanded;
+  border-bottom-right-radius: 20px;
+}
 
 #practice ol{
   list-style-type: upper-roman;
