@@ -249,20 +249,22 @@ tr:nth-child(even){
 tr:nth-child(odd){
   background-color: #ffffff;
   text-rendering: auto;
-  text-decoration: overline;
   transition: 0.5s;
 }
 
 tr:hover{
   background-color: #db6666;
+  text-decoration: underline;
 }
 
 tr:first-of-type:hover{
   background-color: #966bbc;
+  text-decoration: underline;
 }
 
 tr:last-of-type:hover{
   background-color: #ffffff;
+  text-decoration: underline;
 }
 
 th{
