@@ -165,7 +165,7 @@ section.container#blog{
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap-reverse;
-  flex-direction: row-reverse;/*row is default*/
+  flex-direction: column-reverse;/*row is default*/
   border-top: 5px solid #616310;
   padding: 10px 0 0 0;
   border-bottom: 5px solid #616310;
@@ -201,7 +201,7 @@ section.container#blog{
 
 #blog .post a{
   color:#f8a3d6;
-}
+}section.container#blog
 
 #practice h2{
   color:#cf7922;
@@ -408,6 +408,7 @@ footer#colophon h6{
 /*for different screen sizes*/
 @media screen and (max-width: 500px){
   header.primary nav.primary ul{
+    display:flex;
     flex-direction: column;
     gap: 40px;
   }
@@ -417,9 +418,13 @@ footer#colophon h6{
     margin:auto;
   }
 
-  #blog{
-    flex-direction: column;
-    justify-content: space-evenly;
+  #section.container#blog{
+    text-align: center;
     gap: 50px;
+  }
+
+  aside .container{
+    display:flex;
+    flex-direction: column;
   }
 }
