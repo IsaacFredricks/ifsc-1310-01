@@ -28,6 +28,29 @@ img{
   margin: 50px auto;
 }
 
+.img-right{
+  float: right;
+  border: 5px solid #07E308;
+  padding: 10px;
+  margin: 10px 0 10px 20px;
+  border-radius: 200px;
+}
+
+.img-left{
+  float: left;
+  border: 5px solid #07E308;
+  padding: 10px;
+  margin: 10px 20px 10px 0px;
+  border-radius: 400px;
+}
+
+.img-center{
+  display: block;
+  margin: 30px auto; /*auto centers it*/
+  border: 5px solid #07E308;
+  padding: 10px;
+  border-radius: 300px;
+}
 
 body{
     background-color: #07E308;
@@ -132,7 +155,11 @@ section.container#blog{
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap-reverse;
-  flex-direction: column;/*row is default*/
+  flex-direction: row-reverse;/*row is default*/
+  border-top: 10px solid #616310;
+  padding: 15px 0 0 0;
+  border-bottom: 10px solid #616310;
+  padding: 15px 0 0 0;
   gap: 1rem;
 }
 
@@ -164,9 +191,105 @@ section.container#blog{
   color:#f8a3d6;
 }
 
-aside[role="complementary"]{
+aside[role="complementary"]{/*[] attribute selector can be used for any attribute*/
   background-color: #7a2323b2;
   padding: 20px 20px;
+}
+
+#practice h2{
+  color:#cf7922;
+  border-bottom: 11px double #dc2392;
+}
+
+#practice p{
+  text-indent: 40px;
+}
+
+#practice a{
+  color:#000000;
+  transition: 1s;
+}
+
+#practice a:hover{
+  text-decoration: none;
+}
+
+#practice h3{
+  border-left: 5px solid rgb(55, 55, 155);
+  padding: 6px 0 6px 20px;
+  border-top-left-radius: 20px;
+}
+
+table{
+  width: 90%;
+  border: 5px solid purple;
+  border-collapse: collapse; /*stops double border*/
+}
+
+caption{
+  text-decoration: wavy;
+  font-weight: bolder;
+  font-size: 1.5rem;
+}
+
+tr:nth-child(even){
+  background-color: #966bbc;
+}
+
+tr:nth-child(odd){
+  background-color: #ffffff;
+}
+
+tr:hover{
+  background-color: #db6666;
+}
+
+th{
+  background-color: #c5ca39;
+  padding: 15px;
+}
+
+td{
+  border: 5px solid purple;
+  padding: 5px;
+  gap: 10px;git a
+}
+
+td:nth-child(n+2){/*right align numerical values
+  n+2 every other column after the 1st column*/
+  text-align: right;
+}
+
+
+#practice ol{
+  list-style-type: upper-roman;
+}
+
+#practice ul li ul{
+  list-style-type: decimal;
+  list-style-position: inherit;
+}
+
+#practice dl dt{
+  font-weight: bold;
+}
+
+#practice dl dd{
+  margin:auto;
+}
+
+#practice dd + dt{ /*selects all dd's that follow a dt*/
+  margin-top: 15px;
+  color: red;
+}
+
+#practice blockquote{
+  border: 20px double rgba(126, 142, 157, 0.5);
+  line-height: 1.2;
+}
+
+#practice h4{
+  
 }
 
 aside .container{
@@ -192,6 +315,7 @@ aside article.widget a:last-of-type{/*last element in list of sibling elements*/
   margin-bottom: 15px;
   text-align: left;
 }
+
 
 footer#colophon{
   background-color: rgba(62, 226, 188, 0.503);
