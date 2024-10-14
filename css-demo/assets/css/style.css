@@ -52,6 +52,13 @@ img{
   border-radius: 300px;
 }
 
+.img-none{
+  float:none;
+  border: 20px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
 body{
     background-color: #07E308;
     font-family: "Roboto", sans-serif; /*font*/
@@ -339,5 +346,11 @@ footer#colophon{
   header.primary nav a{
     display:block;
     margin:auto;
+  }
+
+  #blog{
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 50px;
   }
 }
