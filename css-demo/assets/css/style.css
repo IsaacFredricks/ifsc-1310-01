@@ -309,10 +309,19 @@ td:nth-child(n+2){/*right align numerical values
 #practice ul li:hover{
   list-style-type: square;
   background-color: rgba(50, 15, 177, 0.5);
+  padding: 10px 0 0 0;
 }
 
 #practice dl dt{
   font-weight: bold;
+  transition: 0.5s;
+}
+
+#practice dl dt:hover{
+  font-weight: bolder;
+  font-style: italic;
+  border: 10px solid #fbff00;
+  padding: 10px 0 0 0;
 }
 
 #practice dl dd{
