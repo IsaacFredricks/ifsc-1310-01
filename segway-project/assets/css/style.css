@@ -2,9 +2,11 @@
 main background: #7CF7B3
 head: #AAB6BF
 header background, h background: #7C9BF7
-image/footer background: #7CE9F7
-paragraphs: #BAECD8
+image/footer/li background: #7CE9F7
+paragraphs: rgba(42, 199, 204, 0.8)
 footer text, misc.: #CEF3F7
+visited links: #1d7a86
+article: rgba(33, 161, 212, 0.5)
 */
 
 
@@ -24,11 +26,13 @@ body{
 }  
 
 header{
+    margin: auto;
     background-color: #aab6bf;
+    max-width: 1000px;
 }
 
 p{
-    background-color: #BAECD8;
+    background-color: rgba(42, 199, 204, 0.8);
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.4'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 
@@ -39,23 +43,43 @@ img{
     border-radius: 20px;
 }
 
+article{
+    background-color: rgba(33, 161, 212, 0.5);
+}
+
 h1{
     text-align: left;
     text-indent: 2%;
     border: 10px solid #cef3f7;
     border-top-right-radius: 20px;
     border-bottom-left-radius: 20px;
+    transition: 0.5s;
+    
 }
 
 h1.primary{
+    text-indent: 0;
     text-align: center;
     font-weight: bolder;
     text-decoration: underline;
 }
 
+h1.primary:hover{
+    border-top-right-radius: 0px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 20px;
+    background-color: #7ce9f7;
+}
+
+h1 a:visited{
+    color: #000000;
+}
+
 h2{
     text-decoration: underline;
     text-indent: 3%;
+    background-color: #7c9bf7;
 }
 
 h2.primary{
@@ -67,7 +91,6 @@ h2.primary{
 
 h3{
     text-transform: uppercase;
-    font-weight: 0;
     background-color: #7c9bf7;
 }
 
@@ -86,6 +109,12 @@ h6{
     max-width: fit-content;
 }
 
+footer{
+    background-color: #cef3f7;
+    text-align: center;
+    font-size: medium;
+}
+
 ul{
     display: flex;
     flex-direction: row;
@@ -93,7 +122,59 @@ ul{
     justify-content: space-between;
 }
 
-li{
+ul li{
     list-style-type: none;
-    font-size: medium;
+    font-size: large;
+    margin: 5px;
+    padding: 5px;
+    border: 5px dotted #7CE9F7;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    text-decoration: underline;
+    transition: 0.5s;
+}
+
+ul li:hover{
+    color:#2b4daa;
+    border: 5px solid #7c9bf7;
+    background-color: #7CF7B3;
+}
+
+ol li{
+    transition: 1s;
+    border-color: #7CF7B3;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+ol li:hover{
+    list-style-type: upper-roman;
+    background-color: #ffffff;
+}
+
+ol li ul li:hover{
+    list-style-type: none;
+}
+
+a:visited{
+    color: #1d7a86;
+}
+
+a{
+    color:#1d7a86;
+    text-decoration: none;
+}
+
+section.container#content{
+    background-color:rgba(33, 161, 212, 0.5);
+}
+footer.top{
+    display: block;
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    max-width: fit-content;
+    padding: 20px;
+    border-radius: 30px;
 }
