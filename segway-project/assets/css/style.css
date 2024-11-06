@@ -23,6 +23,12 @@ img{
     max-width: 100%;
     border: 5px solid #7ce9f7;
     border-radius: 20px;
+    transition: 0.5s;
+}
+
+img:hover{
+    border: 0;
+    border-radius: 0;
 }
 
 figcaption{
@@ -35,15 +41,9 @@ figcaption{
     float: right;
 }
 
-.img-right + figcaption{
-    float: right;
-}
+
 
 .img-left{
-    float: left;
-}
-
-.img-left + figcaption{
     float: left;
 }
 
@@ -53,6 +53,7 @@ figcaption{
 }
 
 .img-center + figcaption{
+    display: inline;
     text-align: center;
 }
 
@@ -61,8 +62,9 @@ figcaption{
     border: 0;
     min-width: 1000px;
 }
+
 figure{
-    min-height: 225px;
+    max-height: 300px;
 }
 
 body{
@@ -166,7 +168,7 @@ ul{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 ul li{
@@ -204,9 +206,6 @@ ol li:hover{
     background-color: #ffffff;
 }
 
-ol li ul li:hover{
-    list-style-type: none;
-}
 
 a:visited{
     color: #1d7a86;
