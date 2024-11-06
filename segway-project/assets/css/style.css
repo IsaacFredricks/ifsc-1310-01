@@ -25,6 +25,12 @@ img{
     border-radius: 20px;
 }
 
+figcaption{
+    display: table-caption;
+    caption-side: bottom;
+    background-color: #ffffff;
+}
+
 .img-right{
     float: right;
 }
@@ -50,6 +56,11 @@ img{
     text-align: center;
 }
 
+.logo{
+    border-radius: 0;
+    border: 0;
+    min-width: 1000px;
+}
 figure{
     min-height: 225px;
 }
@@ -150,7 +161,8 @@ footer{
 }
 
 ul{
-    line-height: 1.5;
+    background-color: #ffffff;
+    border-radius: 15px;
     display: flex;
     flex-direction: row;
     justify-content: center;
