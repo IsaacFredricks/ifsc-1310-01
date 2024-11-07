@@ -26,7 +26,7 @@ img{
     transition: 0.5s;
 }
 
-.img-left:hover, .img-right:hover, .img-center:hover{
+img:hover{
     border: 5px solid #7ce9f7;
     border-radius: 20px;
 }
