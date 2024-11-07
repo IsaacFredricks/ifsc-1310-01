@@ -28,7 +28,6 @@ figcaption{
     width: 100%;
     background-color: #ffffff;
     text-align: center;
-    padding: 3px;
 }
 
 figure{
@@ -213,6 +212,15 @@ ol li:hover{
 details > summary{
     /*> means thing on the right is direct child of thing on left*/
     padding: 5px;
+    transition: 0.5s;
+}
+
+summary:before{
+    transition: 0.25s;
+}
+
+details[open] > summary:before {
+    transform: rotate(90deg);
 }
 
 details > p{
