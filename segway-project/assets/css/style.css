@@ -25,15 +25,14 @@ img{
 }
 
 figcaption{
-    display: table-caption;
-    caption-side: bottom;
+    width: 100%;
     background-color: #ffffff;
-    text-align: left;
-    padding: 5px;
+    text-align: center;
+    padding: 3px;
 }
 
 figure{
-    min-height: fit-content;
+    display: inline-block;
     transition: 0.5s;
 }
 
