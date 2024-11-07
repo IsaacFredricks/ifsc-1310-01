@@ -21,22 +21,36 @@ links: color:#2b4daa;
 /*responsive images*/
 img{
     max-width: 100%;
-    border: 0;
-    border-radius: 0;
     transition: 0.5s;
-}
-
-img:hover{
-    border: 5px solid #7ce9f7;
-    border-radius: 20px;
 }
 
 figcaption{
     display: table-caption;
     caption-side: bottom;
     background-color: #ffffff;
+    text-align: left;
+    padding: 5px;
 }
 
+figure{
+    min-height: fit-content;
+    transition: 0.5s;
+}
+
+.img-left:hover, .img-center:hover, .img-right:hover{
+    border: 5px solid #7ce9f7;
+    border-radius: 20px;
+}
+
+.img-left:hover img, .img-center:hover img, .img-right:hover img{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.img-left:hover img + figcaption, .img-center:hover img + figcaption, .img-right:hover img + figcaption{
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
 .img-right{
     float: right;
 }
@@ -50,12 +64,9 @@ figcaption{
     margin: 10px auto;
 }
 
-.img-center + figcaption{
-    display: inline;
-    text-align: center;
-}
-
 .logo{
+    display: block;
+    margin: 10px auto;
     height: 200px;
     border-radius: 0;
     border: 0;
