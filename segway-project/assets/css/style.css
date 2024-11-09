@@ -199,6 +199,11 @@ ul li:hover{
     background-color: #7CF7B3;
 }
 
+.post ul li{
+    color:#000000;
+    text-decoration: none;
+}
+
 ol{
     line-height: 1.5;
 }
