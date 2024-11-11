@@ -10,10 +10,19 @@ article: rgba(33, 161, 212, 0.5)
 links: color:#2b4daa;
 */
 
+html {
+    box-sizing: border-box;
+  }
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
 
 /*utility classes*/
 .container{
     display: block;
+    width: 80vw;
     max-width: 1000px;
     margin: 25px auto;/*auto centers conntent*/
 }
@@ -69,6 +78,19 @@ figure{
     margin: 10px auto;
 }
 
+header.primary h1.logo{
+    width: 261px;
+    height: 150px;
+    border: 0;
+    background-image: url("/segway-project/assets/img/logosmall.png");
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    border: none;
+    display: block;
+    position: relative;
+}
+
 .logo{
     display: block;
     margin: 10px auto;
@@ -85,14 +107,25 @@ body{
 }  
 
 header{
-    margin: auto;
     background-color: #aab6bf;
-    max-width: 1000px;
+}
+
+header.primary::before{
+  content: "";
+  background-image: url("/segway-project/assets/img/centaur.jpg");
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.4;
 }
 
 p{
     background-color: rgba(42, 199, 204, 0.8);
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.4'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    text-indent: 1rem;
 }
 
 article{
@@ -107,7 +140,6 @@ h1{
     border-top-right-radius: 20px;
     border-bottom-left-radius: 20px;
     transition: 0.5s;
-    
 }
 
 h1.primary{
@@ -115,6 +147,12 @@ h1.primary{
     text-align: center;
     font-weight: bolder;
     text-decoration: underline;
+    position: relative;
+    text-shadow: 4px 4px #000000;
+}
+
+nav{
+    position: relative;
 }
 
 h1.primary:hover{
@@ -144,6 +182,8 @@ h2.primary{
     max-width: fit-content;
     padding-left: 5px;
     padding-right: 5px;
+    border-radius: 5px;
+    position: relative;
 }
 
 h3{
@@ -255,6 +295,12 @@ a.email{
 
 section.container#content{
     background-color:rgba(33, 161, 212, 0.5);
+}
+
+section#articles .container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 footer.top{
