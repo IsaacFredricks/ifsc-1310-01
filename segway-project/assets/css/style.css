@@ -148,7 +148,7 @@ h1.primary{
     font-weight: bolder;
     text-decoration: underline;
     position: relative;
-    text-shadow: 4px 4px #000000;
+    text-shadow: 2px 1px #000000;
 }
 
 nav{
