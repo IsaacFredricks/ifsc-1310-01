@@ -152,6 +152,7 @@ h1.primary{
     text-decoration: underline;
     position: relative;
     text-shadow: 2px 1px #000000;
+    background-color: #ffffff;
 }
 
 nav{
