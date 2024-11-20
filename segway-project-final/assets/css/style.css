@@ -282,19 +282,49 @@ ol li:hover{
     background-color: #ffffff;
 }
 
-details > summary{
-    /*> means thing on the right is direct child of thing on left*/
+/*source for details: https://css-tricks.com/how-to-animate-the-details-element/ */
+summary{
     padding: 5px;
+    display: block;
     transition: 0.5s;
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+}
+
+details{
+    overflow: hidden;
 }
 
 summary:before{
-    transition: 0.25s;
+    content: '';
+    border-width: .5rem;
+    border-style: solid;
+    border-color: transparent transparent transparent #7CF7B3;
+    left: 0;
+    bottom: 1;
+    position: absolute;
+    transform: rotate(0);
+    transform-origin: .5rem 50%;
+    transition: .5s transform ease;
 }
 
-details[open] > summary:before {
+details[open] > summary::before {
     transform: rotate(90deg);
 }
+
+details summary::-webkit-details-marker {
+    display:none;
+}
+
+summary {
+    padding: 1rem;
+    display: block;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+  }
+  
 
 a:visited{
     color: #1d7a86;
