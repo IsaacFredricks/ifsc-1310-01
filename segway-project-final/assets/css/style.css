@@ -277,6 +277,10 @@ ol li{
     border-bottom-right-radius: 20px;
 }
 
+ol li p{
+    border-radius: 15px;
+}
+
 ol li:hover{
     list-style-type: upper-roman;
     background-color: #ffffff;
