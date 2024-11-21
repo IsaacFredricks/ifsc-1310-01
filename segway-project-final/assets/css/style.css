@@ -24,7 +24,7 @@ html {
     display: block;
     width: 80vw;
     max-width: 1000px;
-    margin: 25px auto;/*auto centers conntent*/
+    margin: 15px auto;/*auto centers conntent*/
 }
 
 .clear{
@@ -239,6 +239,7 @@ ul{
     flex-direction: row;
     justify-content: center;
     justify-content: space-evenly;
+    padding: 0;
 }
 
 ul li{
@@ -346,8 +347,6 @@ a.email{
 
 section.container#content{
     background-color:rgba(33, 161, 212, 0.5);
-    margin-top: 10px;
-    margin-bottom: 10px;
 }
 
 section.container ol{
@@ -357,14 +356,14 @@ section.container ol{
 section#articles .container{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 article.post{
-    margin-top: 10px;
-    margin-bottom: 10px;
     padding: 5px;
     border-radius: 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 footer.top{
