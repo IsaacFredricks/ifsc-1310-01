@@ -381,5 +381,5 @@ footer.top{
 }
 
 footer.top:hover{
-    border-radius: 0;
+    border-radius: 10px;
 }
