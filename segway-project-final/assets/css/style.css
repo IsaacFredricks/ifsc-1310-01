@@ -368,6 +368,9 @@ article.post{
     margin-top: 5px;
     margin-bottom: 5px;
 }
+article.post footer{
+    border-radius: 5px;
+}
 
 footer.top{
     display: block;
