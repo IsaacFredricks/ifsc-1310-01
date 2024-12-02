@@ -8,6 +8,7 @@ footer text, misc.: #CEF3F7
 visited links: #1d7a86
 article: rgba(33, 161, 212, 0.5)
 links: color:#2b4daa;
+links:visited - #1d7a76
 */
 
 html {
@@ -36,6 +37,31 @@ img{
     max-width: 100%;
     transition: 0.5s;
 }
+
+/* Customize Previous/Next/Dots/Autoplay */
+
+.slick-prev .slick-prev-icon, .slick-next .slick-next-icon,
+.slick-dots li button .slick-dot-icon,
+.slick-dots li.slick-active button .slick-dot-icon {
+  color: #000000;
+}
+
+/* Customize Previous/Next/Dots/Autoplay - Active State */
+
+.slick-next:focus .slick-next-icon,
+.slick-next:focus .slick-prev-icon,
+.slick-prev:focus .slick-next-icon,
+.slick-prev:focus .slick-prev-icon,
+.slick-dots li button:focus .slick-dot-icon:before,
+.slick-dots li.slick-active button:focus .slick-dot-icon,
+.slick-autoplay-toggle-button:focus 
+{
+    color: #2b4daa;
+}
+
+.slick-autoplay-toggle-button{
+    display: none;
+}/*hides pause button for slick*/
 
 figcaption{
     width: 100%;
@@ -80,7 +106,7 @@ figure{
 }
 
 header.primary h1.logo{
-    width: 261px;
+    width: 260px;
     height: 150px;
     border: 0;
     background-image: url("/segway-project/assets/img/logosmall.png");
@@ -307,7 +333,6 @@ summary:before{
     border-style: solid;
     border-color: transparent transparent transparent #7CF7B3;
     left: 0;
-    bottom: 1;
     position: absolute;
     transform: rotate(0);
     transform-origin: .5rem 50%;
@@ -335,7 +360,7 @@ summary {
 }
 
 a:visited{
-    color: #1d7a86;
+    color: #1d7a76;
 }
 
 a{
